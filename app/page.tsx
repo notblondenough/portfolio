@@ -38,6 +38,11 @@ export default function Home() {
             <li>
               <a href={`mailto:${site.email}`}>Email</a>
             </li>
+            <li>
+              <a href={site.resume} target="_blank" rel="noreferrer">
+                Résumé
+              </a>
+            </li>
             {site.links.map((l) => (
               <li key={l.label}>
                 <a href={l.href} target="_blank" rel="noreferrer">

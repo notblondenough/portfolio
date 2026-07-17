@@ -10,6 +10,7 @@ export const site = {
   currently:
     "Currently at Whatfix, turning week-long manual workflows into three-hour automated ones.",
   email: "alokranjanshuklaofficial@gmail.com",
+  resume: "/resume.pdf",
   links: [
     { label: "GitHub", href: "https://github.com/notblondenough" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/alok-shukla-059ab8253/" },

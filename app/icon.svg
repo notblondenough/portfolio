@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- The site in one frame: sun setting over the highway, telephone
+       pole against the sky, dashed center line running into night. -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8a263"/>
+      <stop offset="0.45" stop-color="#e8863a"/>
+      <stop offset="0.78" stop-color="#c4502c"/>
+      <stop offset="1" stop-color="#6d3550"/>
+    </linearGradient>
+    <clipPath id="frame"><rect width="64" height="64" rx="12"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="64" height="40" fill="url(#sky)"/>
+    <circle cx="19" cy="40" r="7.5" fill="#f6f0e4" opacity="0.92"/>
+    <rect y="40" width="64" height="24" fill="#16182b"/>
+    <rect y="39" width="64" height="1.8" fill="#0f1120"/>
+    <g stroke="#0f1120" stroke-width="2.6" stroke-linecap="round">
+      <line x1="46" y1="40" x2="46" y2="11"/>
+      <line x1="37" y1="16" x2="55" y2="16"/>
+      <line x1="40" y1="22" x2="52" y2="22"/>
+    </g>
+    <g fill="#e8a263">
+      <rect x="30" y="45" width="4" height="7" rx="1.2"/>
+      <rect x="30" y="56" width="4" height="7" rx="1.2"/>
+    </g>
+  </g>
+</svg>

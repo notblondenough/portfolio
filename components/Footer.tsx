@@ -13,6 +13,11 @@ export default function Footer() {
           </p>
         </div>
         <ul className={styles.links} aria-label="Profiles">
+          <li>
+            <a href={site.resume} target="_blank" rel="noreferrer">
+              Résumé
+            </a>
+          </li>
           {site.links.map((l) => (
             <li key={l.label}>
               <a href={l.href} target="_blank" rel="noreferrer">
