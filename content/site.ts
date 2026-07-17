@@ -17,5 +17,5 @@ export const site = {
     { label: "LeetCode", href: "https://leetcode.com/u/alkuhskola" },
     { label: "Codeforces", href: "https://codeforces.com/profile/retards" },
   ],
-  url: "https://alokranjanshukla.vercel.app", // update after first deploy
+  url: "https://alokrshukla.vercel.app",
 } as const;
