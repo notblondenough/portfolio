@@ -1,0 +1,42 @@
+.row {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(11.5rem, 100%), 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.item {
+  text-align: center;
+}
+
+/* route-shield silhouette: square shoulders, rounded base */
+.shield {
+  display: grid;
+  gap: 0.2rem;
+  padding: 1.4rem 1rem 1.7rem;
+  border: 2.5px solid var(--ink);
+  border-radius: 14px 14px 46% 46% / 14px 14px 34% 34%;
+  background: color-mix(in srgb, var(--glare) 55%, transparent);
+}
+
+.platform {
+  opacity: 0.75;
+  font-size: 0.7rem;
+}
+
+.figure {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.detail {
+  margin-top: 0.75rem;
+  font-size: var(--step--1);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  opacity: 0.75;
+}

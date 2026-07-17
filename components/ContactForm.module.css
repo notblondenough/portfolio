@@ -1,0 +1,84 @@
+.form {
+  display: grid;
+  gap: 1.4rem;
+  max-width: 44rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+  gap: 1.4rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.7rem;
+  color: var(--pale-soft);
+}
+
+.input {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--pale);
+  background: rgba(239, 231, 216, 0.05);
+  border: 1px solid var(--line-night);
+  border-radius: 4px;
+  padding: 0.8rem 0.95rem;
+  transition: border-color 200ms ease;
+  resize: vertical;
+}
+
+.input:hover {
+  border-color: rgba(239, 231, 216, 0.4);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--neon-green);
+  box-shadow: 0 0 14px rgba(63, 224, 176, 0.18);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--asphalt);
+  background: var(--sunset);
+  border: none;
+  border-radius: 4px;
+  padding: 0.9rem 1.6rem;
+  cursor: pointer;
+  transition:
+    background 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--gold);
+  box-shadow: 0 0 22px rgba(232, 134, 58, 0.35);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.status {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--pale-soft);
+  min-height: 1.5em;
+}

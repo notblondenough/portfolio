@@ -1,142 +1,269 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
+/* One day on the road: each section owns a slice of the sky,
+   and the gradients chain end-to-end so the fall of light is
+   continuous from noon glare to full night. */
 
-  --text-primary: #000;
-  --text-secondary: #666;
+/* ---------- noon ---------- */
 
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
+.hero {
+  background: linear-gradient(to bottom, var(--glare) 0%, var(--bone) 100%);
+  color: var(--ink);
+  min-height: 92svh;
   display: flex;
+  flex-direction: column;
+}
+
+.heroInner {
   flex: 1;
+  display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  gap: 1.4rem;
+  padding-block: clamp(4rem, 12vh, 8rem) 3rem;
 }
 
-.main {
+.heroInner > .kicker,
+.heroInner :global(.kicker) {
+  color: var(--ink-soft);
+}
+
+.name {
+  font-size: var(--step-display);
+  max-width: 12ch;
+}
+
+.tagline {
+  font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+  max-width: 44ch;
+  color: var(--ink-soft);
+}
+
+.currently {
+  font-style: italic;
+  color: var(--ink-soft);
+  max-width: 44ch;
+}
+
+.quickLinks {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.8rem;
   display: flex;
-  flex: 1;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.quickLinks a {
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--ember);
+  padding-bottom: 2px;
+}
+
+.quickLinks a:hover {
+  color: var(--ember);
+}
+
+.roadSign {
+  align-self: center;
+  padding-bottom: 1.6rem;
+  color: var(--ink-soft);
+  opacity: 0.7;
+}
+
+/* ---------- late afternoon ---------- */
+
+.work {
+  background: linear-gradient(to bottom, var(--bone) 0%, var(--sand) 100%);
+  color: var(--ink);
+  padding-block: clamp(4rem, 10vw, 7rem);
+}
+
+/* ---------- golden hour ---------- */
+
+.highlights {
+  background: linear-gradient(
+    to bottom,
+    var(--sand) 0%,
+    var(--gold) 78%,
+    var(--sunset) 100%
+  );
+  color: var(--ink);
+  padding-block: clamp(4rem, 10vw, 7rem);
+}
+
+.extras {
+  margin-top: 1.75rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.toolkit {
+  margin-top: clamp(3rem, 7vw, 4.5rem);
+  border-top: 1px solid var(--line-day);
+  padding-top: clamp(2rem, 5vw, 3rem);
+}
+
+.toolkitTitle {
+  font-size: var(--step-2);
+  margin-bottom: 1.75rem;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(21rem, 100%), 1fr));
+  gap: 1.5rem 3rem;
+}
+
+.skillGroup {
+  display: grid;
+  gap: 0.4rem;
+  align-content: start;
+}
+
+.skillLabel {
+  opacity: 0.7;
+  font-size: 0.7rem;
+}
+
+.skillItems {
+  margin: 0;
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+
+/* ---------- sunset band: the film's money shot, no words ---------- */
+
+.sunsetBand {
+  background: linear-gradient(
+    to bottom,
+    var(--sunset) 0%,
+    var(--ember) 34%,
+    #6d3550 62%,
+    var(--dusk) 100%
+  );
+  padding-top: clamp(4rem, 12vw, 9rem);
+  display: flex;
+  align-items: flex-end;
+}
+
+.horizon {
   width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+  height: clamp(90px, 14vw, 170px);
+  color: var(--asphalt);
+  opacity: 0.9;
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
+/* ---------- dusk ---------- */
+
+.projects {
+  background: linear-gradient(to bottom, var(--dusk) 0%, var(--night) 100%);
+  color: var(--pale);
+  padding-block: clamp(4rem, 10vw, 7rem);
 }
 
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
+.projects :global(.kicker) {
+  color: var(--neon-green);
+  text-shadow: 0 0 12px rgba(63, 224, 176, 0.35);
 }
 
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(21rem, 100%), 1fr));
+  gap: clamp(1.5rem, 3.5vw, 2.5rem);
+  align-items: stretch;
 }
 
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
+.cards > * {
+  display: grid; /* let each Reveal wrapper stretch its postcard */
 }
 
-.ctas {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
+.more {
+  margin-top: 2.25rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.ctas a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
+.more a {
+  text-decoration: none;
+  border-bottom: 1.5px solid currentColor;
+  padding-bottom: 2px;
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+.more a:hover {
+  color: var(--neon-green);
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
+/* ---------- night: journal ---------- */
+
+.journal {
+  background: var(--night);
+  color: var(--pale);
+  padding-block: clamp(4rem, 10vw, 6rem);
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
+.journal :global(.kicker) {
+  color: var(--pale-soft);
 }
 
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
+.postCard {
+  border: 1px solid var(--line-night);
+  border-radius: 6px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  max-width: 46rem;
+  display: grid;
+  gap: 0.8rem;
+  background: rgba(239, 231, 216, 0.03);
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+.postMeta {
+  color: var(--pale-soft);
+  font-size: 0.7rem;
+}
 
-  .page {
-    --background: #000;
-    --foreground: #000;
+.postTitle {
+  font-size: var(--step-2);
+}
 
-    --text-primary: #ededed;
-    --text-secondary: #999;
+.postTitle a {
+  text-decoration: none;
+}
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
-  }
+.postTitle a:hover {
+  color: var(--neon-green);
+}
+
+.postSummary {
+  color: var(--pale-soft);
+  max-width: var(--prose);
+}
+
+/* ---------- full night: the motel office ---------- */
+
+.contact {
+  background: linear-gradient(to bottom, var(--night) 0%, var(--asphalt) 100%);
+  color: var(--pale);
+  padding-block: clamp(4.5rem, 11vw, 8rem);
+}
+
+.contactInner {
+  display: grid;
+  gap: 2.5rem;
+  justify-items: start;
+}
+
+.contactTitle {
+  font-size: var(--step-3);
+  margin-top: 2rem;
+}
+
+.contactLede {
+  max-width: 52ch;
+  color: var(--pale-soft);
+  margin-top: 0.9rem;
+  font-size: var(--step-1);
 }

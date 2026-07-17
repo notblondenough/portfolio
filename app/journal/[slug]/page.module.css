@@ -1,0 +1,96 @@
+.page {
+  background: linear-gradient(to bottom, var(--night) 0%, var(--asphalt) 100%);
+  color: var(--pale);
+  min-height: 100vh;
+}
+
+.main {
+  padding-block: clamp(3rem, 8vw, 5rem) clamp(4rem, 10vw, 7rem);
+}
+
+.article {
+  max-width: 42rem;
+}
+
+.header {
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  border-bottom: 1px dashed var(--line-night);
+  padding-bottom: 2rem;
+}
+
+.meta {
+  color: var(--pale-soft);
+  font-size: 0.7rem;
+}
+
+.title {
+  font-size: var(--step-3);
+}
+
+.body {
+  display: grid;
+  gap: 1.2rem;
+  font-size: var(--step-0);
+  line-height: 1.75;
+}
+
+.body em {
+  color: var(--pale-soft);
+}
+
+.body h2,
+.body h3 {
+  margin-top: 1rem;
+}
+
+.body a {
+  color: var(--neon-green);
+}
+
+.body code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: rgba(239, 231, 216, 0.08);
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+}
+
+.body pre {
+  overflow-x: auto;
+  background: rgba(239, 231, 216, 0.06);
+  border: 1px solid var(--line-night);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+}
+
+.body pre code {
+  background: none;
+  padding: 0;
+}
+
+.body blockquote {
+  border-left: 3px dashed var(--ember);
+  padding-left: 1.2rem;
+  font-style: italic;
+  color: var(--pale-soft);
+}
+
+.footer {
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  border-top: 1px dashed var(--line-night);
+  padding-top: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--neon-green);
+}

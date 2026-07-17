@@ -1,0 +1,25 @@
+.page {
+  background: linear-gradient(to bottom, var(--dusk) 0%, var(--night) 100%);
+  color: var(--pale);
+  min-height: 100vh;
+}
+
+.main {
+  padding-block: clamp(3rem, 8vw, 5rem) clamp(4rem, 10vw, 7rem);
+}
+
+.main :global(.kicker) {
+  color: var(--neon-green);
+  text-shadow: 0 0 12px rgba(63, 224, 176, 0.35);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(21rem, 100%), 1fr));
+  gap: clamp(1.5rem, 3.5vw, 2.5rem);
+  align-items: stretch;
+}
+
+.cards > * {
+  display: grid;
+}

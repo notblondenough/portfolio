@@ -1,0 +1,85 @@
+.log {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 4rem);
+}
+
+/* the highway center-line */
+.list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: clamp(2.25rem, 5vw, 3.25rem);
+  border-left: 3px dashed var(--ember);
+  padding-left: clamp(1.25rem, 4vw, 2.5rem);
+  margin-left: 2px;
+}
+
+.entry {
+  position: relative;
+}
+
+.marker {
+  display: inline-block;
+  border: 1.5px solid currentColor;
+  border-radius: 6px;
+  padding: 0.3rem 0.65rem;
+  margin-bottom: 0.85rem;
+  opacity: 0.85;
+}
+
+.role {
+  font-size: var(--step-2);
+}
+
+.org {
+  margin-top: 0.3rem;
+  font-size: var(--step-1);
+  font-style: italic;
+}
+
+.place {
+  font-style: normal;
+  font-size: var(--step--1);
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.points {
+  margin-top: 1rem;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.55rem;
+  max-width: var(--prose);
+}
+
+.points li::marker {
+  color: var(--ember);
+}
+
+.schooling {
+  border-top: 1px solid var(--line-day);
+  padding-top: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.schoolKicker {
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+}
+
+.schoolList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+  gap: 2rem;
+}
+
+.schoolName {
+  font-size: var(--step-1);
+}
+
+.schoolDetail {
+  margin-top: 0.3rem;
+}

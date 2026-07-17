@@ -1,0 +1,21 @@
+.head {
+  display: grid;
+  gap: 0.85rem;
+  margin-bottom: clamp(2.25rem, 5vw, 3.5rem);
+}
+
+.head .kicker,
+.head :global(.kicker) {
+  opacity: 0.75;
+}
+
+.title {
+  font-size: var(--step-3);
+}
+
+.lede {
+  max-width: var(--prose);
+  font-size: var(--step-1);
+  font-style: italic;
+  opacity: 0.82;
+}

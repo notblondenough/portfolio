@@ -1,0 +1,54 @@
+.sign {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.4rem 2.2rem 1.2rem;
+  border: 2px solid rgba(255, 79, 88, 0.55);
+  border-radius: 10px;
+  box-shadow:
+    0 0 18px rgba(255, 79, 88, 0.18),
+    inset 0 0 22px rgba(255, 79, 88, 0.08);
+}
+
+.vacancy {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+  letter-spacing: 0.42em;
+  margin-right: -0.42em; /* re-center the tracked-out text */
+  text-transform: uppercase;
+  color: var(--neon-red);
+  text-shadow:
+    0 0 8px rgba(255, 79, 88, 0.75),
+    0 0 24px rgba(255, 79, 88, 0.45),
+    0 0 60px rgba(255, 79, 88, 0.3);
+}
+
+.sub {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.28em;
+  margin-right: -0.28em;
+  text-transform: uppercase;
+  color: var(--neon-green);
+  text-shadow:
+    0 0 8px rgba(63, 224, 176, 0.7),
+    0 0 26px rgba(63, 224, 176, 0.35);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .vacancy {
+    animation: hum 7s ease-in-out infinite;
+  }
+
+  @keyframes hum {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.82;
+    }
+  }
+}

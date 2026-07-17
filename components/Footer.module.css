@@ -1,0 +1,67 @@
+.footer {
+  background: var(--asphalt);
+  color: var(--pale);
+  border-top: 1px solid var(--line-night);
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+}
+
+.inner {
+  display: grid;
+  gap: 2rem;
+}
+
+.kicker {
+  color: var(--pale-soft);
+}
+
+.big {
+  margin-top: 0.6rem;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+  letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+}
+
+.big a {
+  text-decoration: none;
+}
+
+.big a:hover {
+  color: var(--neon-green);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  list-style: none;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.links a {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.links a:hover {
+  opacity: 1;
+  color: var(--neon-green);
+}
+
+.meta {
+  display: grid;
+  gap: 0.35rem;
+  font-size: var(--step--1);
+  color: var(--pale-soft);
+  border-top: 1px dashed var(--line-night);
+  padding-top: 1.5rem;
+}
+
+.colophon {
+  font-style: italic;
+}

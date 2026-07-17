@@ -1,0 +1,54 @@
+.page {
+  background: linear-gradient(to bottom, var(--night) 0%, var(--asphalt) 100%);
+  color: var(--pale);
+  min-height: 100vh;
+}
+
+.main {
+  padding-block: clamp(3rem, 8vw, 5rem) clamp(4rem, 10vw, 7rem);
+}
+
+.main :global(.kicker) {
+  color: var(--pale-soft);
+}
+
+.empty {
+  font-style: italic;
+  color: var(--pale-soft);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 2rem;
+  max-width: 46rem;
+}
+
+.entry {
+  display: grid;
+  gap: 0.6rem;
+  border-bottom: 1px dashed var(--line-night);
+  padding-bottom: 2rem;
+}
+
+.meta {
+  font-size: 0.7rem;
+}
+
+.title {
+  font-size: var(--step-2);
+}
+
+.title a {
+  text-decoration: none;
+}
+
+.title a:hover {
+  color: var(--neon-green);
+}
+
+.summary {
+  color: var(--pale-soft);
+  max-width: var(--prose);
+}

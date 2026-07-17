@@ -1,0 +1,112 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  background: var(--bone);
+  color: var(--ink);
+  border: 1px solid rgba(33, 28, 23, 0.3);
+  border-radius: 4px;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.25),
+    0 18px 40px -24px rgba(0, 0, 0, 0.55);
+  /* airmail edge along the top */
+  border-top: 6px solid;
+  border-image: repeating-linear-gradient(
+      -45deg,
+      var(--ember) 0 12px,
+      var(--bone) 12px 20px,
+      var(--dusk) 20px 32px,
+      var(--bone) 32px 40px
+    )
+    6;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.name {
+  font-size: var(--step-2);
+  letter-spacing: 0.01em;
+}
+
+.blurb {
+  margin-top: 0.35rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+/* the postage stamp */
+.stamp {
+  flex-shrink: 0;
+  border: 1.5px dashed var(--ink-soft);
+  padding: 0.5rem 0.7rem;
+  text-align: center;
+  font-size: 0.68rem;
+  max-width: 7.5rem;
+  transform: rotate(1.5deg);
+  color: var(--ink-soft);
+}
+
+.points {
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.97rem;
+}
+
+.points li::marker {
+  color: var(--ember);
+}
+
+.bottom {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--line-day);
+  padding-top: 1rem;
+}
+
+.stack {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.stack li {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--line-day);
+  border-radius: 999px;
+  padding: 0.18rem 0.6rem;
+  color: var(--ink-soft);
+}
+
+.links {
+  display: flex;
+  gap: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
+}
+
+.links a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.links a:hover {
+  color: var(--ember);
+  text-decoration: underline;
+}

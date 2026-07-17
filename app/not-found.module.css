@@ -1,0 +1,42 @@
+.page {
+  background: linear-gradient(to bottom, var(--night) 0%, var(--asphalt) 100%);
+  color: var(--pale);
+  min-height: 100vh;
+}
+
+.main {
+  padding-block: clamp(5rem, 16vh, 10rem);
+  display: grid;
+  gap: 1.2rem;
+  max-width: 46rem;
+}
+
+.kicker {
+  color: var(--neon-red);
+  text-shadow: 0 0 12px rgba(255, 79, 88, 0.4);
+}
+
+.title {
+  font-size: var(--step-3);
+}
+
+.copy {
+  color: var(--pale-soft);
+  max-width: var(--prose);
+}
+
+.back {
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.back a {
+  text-decoration: none;
+}
+
+.back a:hover {
+  color: var(--neon-green);
+}
