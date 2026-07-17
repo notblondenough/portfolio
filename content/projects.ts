@@ -5,8 +5,8 @@ export type Project = {
   period: string;
   points: string[];
   stack: string[];
-  github: string; // placeholder until real URL supplied
-  live: string; // placeholder until real URL supplied
+  github: string;
+  live: string;
 };
 
 export const projects: Project[] = [
@@ -21,8 +21,8 @@ export const projects: Project[] = [
       "Optimized backend pipelines for a 25% cut in data-processing latency.",
     ],
     stack: ["React", "Node.js", "BERT", "K-Means"],
-    github: "#",
-    live: "#",
+    github: "https://github.com/Manik-Jasrai/res-u-me",
+    live: "https://res-u-me.vercel.app/",
   },
   {
     slug: "filmfolio",
@@ -35,8 +35,8 @@ export const projects: Project[] = [
       "TMDB and IMDb API integrations for 40% wider film-metadata coverage.",
     ],
     stack: ["React", "Material UI", "Express.js", "MongoDB"],
-    github: "#",
-    live: "#",
+    github: "https://github.com/notblondenough/FilmFolio",
+    live: "https://filmfolio-p0kf.onrender.com/",
   },
   {
     slug: "interviewpad",
@@ -49,7 +49,7 @@ export const projects: Project[] = [
       "Live collaboration features drove 2.5x session engagement; deployed on AWS EC2 / Render / Vercel.",
     ],
     stack: ["Socket.IO", "WebSockets", "AWS EC2", "React"],
-    github: "#",
-    live: "#",
+    github: "https://github.com/notblondenough/InterViewPad",
+    live: "https://interviewpad.onrender.com/",
   },
 ];

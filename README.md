@@ -39,9 +39,9 @@ Push to a Git remote and import the repo at [vercel.com/new](https://vercel.com/
 
 All copy lives in data files, not JSX:
 
-- `content/site.ts` — name, tagline, email, **social links (currently `#` placeholders — fill these in before launch)**
+- `content/site.ts` — name, tagline, email, social links
 - `content/experience.ts` — roles and education
-- `content/projects.ts` — projects (**GitHub/live URLs are `#` placeholders**)
+- `content/projects.ts` — projects with GitHub/live URLs
 - `content/skills.ts`, `content/achievements.ts`
 - `content/journal/*.md` — journal posts (markdown + frontmatter: `title`, `date`, `summary`, optional `sample: true`). The shipped post is a clearly-marked sample; delete it when real posts exist.
 

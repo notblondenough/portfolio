@@ -30,8 +30,12 @@ export default function ProjectPostcard({ project }: { project: Project }) {
           ))}
         </ul>
         <div className={styles.links}>
-          <a href={project.github}>GitHub ↗</a>
-          <a href={project.live}>Live ↗</a>
+          <a href={project.github} target="_blank" rel="noreferrer">
+            GitHub ↗
+          </a>
+          <a href={project.live} target="_blank" rel="noreferrer">
+            Live ↗
+          </a>
         </div>
       </div>
     </article>

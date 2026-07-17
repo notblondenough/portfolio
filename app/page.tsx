@@ -40,7 +40,9 @@ export default function Home() {
             </li>
             {site.links.map((l) => (
               <li key={l.label}>
-                <a href={l.href}>{l.label}</a>
+                <a href={l.href} target="_blank" rel="noreferrer">
+                  {l.label}
+                </a>
               </li>
             ))}
           </ul>

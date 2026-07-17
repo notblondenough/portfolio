@@ -1,5 +1,4 @@
 // Single source of truth for identity, links, and site-wide copy.
-// Social/profile URLs are placeholders ("#") until Alok supplies them.
 
 export const site = {
   name: "Alok Ranjan Shukla",
@@ -12,10 +11,10 @@ export const site = {
     "Currently at Whatfix, turning week-long manual workflows into three-hour automated ones.",
   email: "alokranjanshuklaofficial@gmail.com",
   links: [
-    { label: "GitHub", href: "#" },
-    { label: "LinkedIn", href: "#" },
-    { label: "LeetCode", href: "#" },
-    { label: "Codeforces", href: "#" },
+    { label: "GitHub", href: "https://github.com/notblondenough" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/alok-shukla-059ab8253/" },
+    { label: "LeetCode", href: "https://leetcode.com/u/alkuhskola" },
+    { label: "Codeforces", href: "https://codeforces.com/profile/retards" },
   ],
   url: "https://alokranjanshukla.vercel.app", // update after first deploy
 } as const;
